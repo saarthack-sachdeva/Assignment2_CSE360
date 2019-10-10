@@ -14,7 +14,7 @@ package cse360assign2;
  * @author saarthacksachdeva
  *
  */
-public class AddingMachine{
+public class AddingMachine {
     private int total;
     private StringBuilder sb = new StringBuilder();
 
