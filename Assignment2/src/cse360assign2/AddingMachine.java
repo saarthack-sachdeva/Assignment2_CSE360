@@ -1,64 +1,73 @@
-	/*
-	 * Name: Saarthack Sachdeva
-	 * Classid: CSE 360 (Wed) - 70642
-	 * Assignment_Number: 2
-	 * Description: This is a calculator machine which has blank methods
-	 * 				This is an initial version, which would then be updated
-	 * 				after when we write the functions of the methods.
-	 */
+/*
+ * Name: Saarthack Sachdeva
+ * Classid: CSE 360 (Wed) - 70642
+ * Assignment_Number: 2
+ * Description: This is a calculator machine which is the updated version which now
+ * 				performs all the desired functions of the calculator.
+ */
 
- package cse360assign2;
+package cse360assign2;
 
-	/**
-	 * Initial version of adding machine class which would
-	 * then be updated to perform the required functions.
-	 * @author saarthacksachdeva
-	 *
-	 */
-	public class AddingMachine {
-		private int total;
+/**
+ * Second version of adding machine class now
+ * performs the desired functions of the calculator.
+ * @author saarthacksachdeva
+ *
+ */
+public class AddingMachine {
+    private int total;
+    private StringBuilder sb = new StringBuilder();
 
-		/**
-		 * this is a constructor which initializes the total value to be 0.
-		 */
-		public AddingMachine () {
-			total = 0;  // not needed - included for clarity}
-		}
+    /**
+     * this is a constructor which initializes the total value to be 0.
+     */
+    public AddingMachine() {
+        total = 0;  // not needed - included for clarity}
+        sb.append(total);
+    }
 
-		/**
-		 * initially empty total method
-		 * @return an integer
-		 */
-		public int getTotal () {
-			return 0;
-		}
+    /**
+     * returns the total of the calculator
+     * @return an integer
+     */
+    public int getTotal () {
+        return total;
+    }
 
-		/**
-		 * initially empty add method
-		 * @param value
-		 */
-		public void add(int value) {
+    /**
+     * adding the value to the total of the calculator.
+     * @param value
+     */
+    public void add(int value) {
+        sb.append(" + " + value);
+        total = total + value;
+    }
 
-		}
+    /**
+     * subtracts the value from the total
+     * @param value
+     */
+    public void subtract(int value) {
+        sb.append(" - " + value);
+        total = total - value;
+    }
 
-		/**
-		 * initially empty subtract method
-		 * @param value
-		 */
-		public void subtract(int value) {
+    /**
+     * returns the instructions of the calculator as a String
+     * @return String
+     */
+    public String toString() {
+        return sb.toString();
+    }
 
-		}
+    /**
+     * clears the instructions given to the calculator
+     * and makes the total to be 0.
+     */
+    public void clear() {
+        sb = new StringBuilder();
+        sb.append(0);
+        total = 0;
+    }
+}
 
-		/**
-		 * initial empty method
-		 * @return String
-		 */
-		public String toString() {
-			return "";
-		}
-
-
-		public void clear() {
-
-		}
-	}
